@@ -1,0 +1,264 @@
+.visualSection {
+  position: relative;
+
+  min-height: 180vh;
+
+  padding: 140px 6vw;
+
+  background: #080808;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.visualHeader {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.eyebrow {
+  margin-bottom: 22px;
+
+  color: #ff4d00;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+}
+
+.heading {
+  margin: 0;
+
+  font-size: clamp(45px, 7vw, 90px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+}
+
+.heading span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.65);
+}
+
+.visualStage {
+  position: sticky;
+
+  top: 0;
+
+  height: 100vh;
+
+  margin-top: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.glow {
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 77, 0, 0.18),
+    transparent 65%
+  );
+
+  filter: blur(15px);
+
+  pointer-events: none;
+}
+
+.visualCircle {
+  position: absolute;
+
+  width: min(600px, 70vw);
+  aspect-ratio: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+.visualCircle::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12%;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 50%;
+}
+
+.car {
+  position: relative;
+  z-index: 2;
+
+  width: min(700px, 75vw);
+
+  height: auto;
+
+  object-fit: contain;
+
+  will-change: transform;
+
+  filter: drop-shadow(
+    0 25px 35px rgba(0, 0, 0, 0.6)
+  );
+}
+
+.scrollLabel {
+  position: absolute;
+
+  right: 0;
+
+  bottom: 20%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  transform: rotate(90deg);
+}
+
+.line {
+  display: block;
+
+  width: 55px;
+  height: 1px;
+
+  background: #555555;
+}
+
+.visualInfo {
+  position: absolute;
+
+  left: 6vw;
+
+  bottom: 120px;
+
+  max-width: 300px;
+}
+
+.visualInfo p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .visualSection {
+    min-height: 160vh;
+
+    padding: 110px 5vw;
+  }
+
+  .visualStage {
+    margin-top: 50px;
+  }
+
+  .car {
+    width: 80vw;
+  }
+
+  .visualCircle {
+    width: 70vw;
+  }
+
+  .visualInfo {
+    left: 5vw;
+    bottom: 80px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .visualSection {
+    min-height: 150vh;
+
+    padding: 90px 6vw;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .heading {
+    font-size: clamp(38px, 11vw, 60px);
+  }
+
+  .visualStage {
+    height: 80vh;
+
+    margin-top: 30px;
+  }
+
+  .car {
+    width: 95vw;
+  }
+
+  .visualCircle {
+    width: 82vw;
+  }
+
+  .glow {
+    width: 350px;
+    height: 350px;
+  }
+
+  .scrollLabel {
+    right: -25px;
+
+    bottom: 20%;
+  }
+
+  .visualInfo {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    max-width: 100%;
+
+    margin-top: 20px;
+  }
+}

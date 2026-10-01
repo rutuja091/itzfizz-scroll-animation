@@ -1,17 +1,25 @@
+import styles from "./Hero.module.css";
+
 function Hero() {
   return (
-    <section className="hero">
-      <div className="hero-content">
-        <p className="hero-small-text">DIGITAL EXPERIENCE STUDIO</p>
+    <section className={styles.hero} id="home">
+      <div className={styles.heroContent}>
+        <p className={styles.eyebrow}>DIGITAL EXPERIENCE STUDIO</p>
 
-        <h1>
-          W E L C O M E <br />
-          I T Z F I Z Z
+        <h1 className={styles.title}>
+          <span>W E L C O M E</span>
+          <span>I T Z F I Z Z</span>
         </h1>
 
-        <p className="hero-description">
-          We create digital experiences that connect brands with people.
+        <p className={styles.description}>
+          We create digital experiences that connect brands, technology,
+          and people through meaningful design.
         </p>
+
+        <div className={styles.heroBottom}>
+          <span>SCROLL TO EXPLORE</span>
+          <span className={styles.arrow}>↓</span>
+        </div>
       </div>
     </section>
   );
