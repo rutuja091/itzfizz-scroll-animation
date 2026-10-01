@@ -1,36 +1,159 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 6vw;
+
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  z-index: 1000;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #ff4d00;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.navLinks a {
+  position: relative;
+
+  color: #aaaaaa;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  transition: color 0.3s ease;
+}
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: #ff4d00;
+
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #ffffff;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.menuButton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+
+  background: transparent;
+}
+
+.menuButton span {
+  display: block;
+
+  width: 24px;
+  height: 1px;
+
+  background: #ffffff;
+
+  transition: transform 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 5vw;
+  }
+
+  .navLinks {
+    gap: 25px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
+  .navbar {
+    height: 68px;
+    padding: 0 6vw;
+  }
+
   .navLinks {
     position: absolute;
-    top: 70px;
+
+    top: 68px;
     left: 0;
+
     width: 100%;
-    padding: 25px 30px;
+
+    padding: 28px 6vw;
 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 22px;
 
     background: rgba(10, 10, 10, 0.97);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
-    transform: translateY(-20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
     opacity: 0;
     visibility: hidden;
+    transform: translateY(-15px);
 
     transition:
       opacity 0.3s ease,
-      transform 0.3s ease,
-      visibility 0.3s ease;
+      visibility 0.3s ease,
+      transform 0.3s ease;
   }
 
   .navLinks.active {
-    transform: translateY(0);
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
   }
 
   .navLinks a {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .menuButton {
