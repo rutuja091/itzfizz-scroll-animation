@@ -1,16 +1,54 @@
-# React + Vite
+# ITZFIZZ Scroll-Driven Hero Experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern scroll-driven hero experience built as part of the ITZFIZZ Web Development Internship assignment.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://YOUR-NETLIFY-URL.netlify.app/
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://github.com/rutuja091/itzfizz-scroll-animation
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Modern responsive hero section
+- Letter-spaced typography
+- GSAP intro animations
+- Staggered statistics reveal
+- Scroll-driven visual animation
+- GSAP ScrollTrigger integration
+- Smooth car movement based on scroll
+- Animated visual circle and glow
+- Responsive mobile navigation
+- Fully responsive layout
+- Performance-focused transform animations
+
+## Technologies Used
+
+- React.js
+- JavaScript
+- CSS
+- CSS Modules
+- GSAP
+- GSAP ScrollTrigger
+- Vite
+
+## Project Structure
+
+```text
+src/
+├── assets/
+├── components/
+│   ├── Navbar/
+│   ├── Hero/
+│   ├── Stats/
+│   ├── ScrollVisual/
+│   └── Footer/
+├── animations/
+│   ├── introAnimation.js
+│   └── scrollAnimation.js
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx

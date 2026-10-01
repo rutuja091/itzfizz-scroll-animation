@@ -19,21 +19,10 @@ function Navbar() {
           menuOpen ? styles.active : ""
         }`}
       >
-        <a href="#home" onClick={closeMenu}>
-          Home
-        </a>
-
-        <a href="#about" onClick={closeMenu}>
-          About
-        </a>
-
-        <a href="#work" onClick={closeMenu}>
-          Work
-        </a>
-
-        <a href="#contact" onClick={closeMenu}>
-          Contact
-        </a>
+        <a href="#home" onClick={closeMenu}>Home</a>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#work" onClick={closeMenu}>Work</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
       </nav>
 
       <button
